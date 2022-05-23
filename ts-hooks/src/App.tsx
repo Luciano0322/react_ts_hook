@@ -1,12 +1,15 @@
 import UseContextComponent from "./components/UseContextComponent";
 import UseEffectComponent from "./components/UseEffectComponent";
 import UseReducerComponent from "./components/UseReducerComponent";
+import UseRefComponent from "./components/UseRefComponent";
 import UseStateComponent from "./components/UseStateComponent";
 
 
 function App() {
   return (
     <div>
+      <h1>useRef</h1>
+      <UseRefComponent/>
       <h1>useReducer</h1>
       <UseReducerComponent />
       <h1>useContext</h1>
