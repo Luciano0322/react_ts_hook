@@ -3,18 +3,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiSun, BiMoon } from 'react-icons/bi';
 
-const Navbar = ({dark, darkFn}:{dark: boolean; darkFn: () => void}) => {
+const Navbar = ({ dark, darkFn }: { dark: boolean; darkFn: () => void }) => {
   return (
-    <AppBar 
-      position="fixed" 
+    <AppBar
+      position="fixed"
       // color="primary" 
       // enableColorOnDark 
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >
       <Toolbar>
-        <Typography 
-          variant="h6" 
-          noWrap 
+        <Typography
+          variant="h6"
+          noWrap
           component={Link}
           to="/"
           sx={{
@@ -28,7 +28,7 @@ const Navbar = ({dark, darkFn}:{dark: boolean; darkFn: () => void}) => {
           Mui 5 Demo
         </Typography>
         <IconButton onClick={darkFn}>
-          {dark ? <BiSun/> : <BiMoon/>}
+          {dark ? <BiSun /> : <BiMoon />}
         </IconButton>
       </Toolbar>
     </AppBar>
