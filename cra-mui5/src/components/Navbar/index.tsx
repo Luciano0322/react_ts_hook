@@ -26,7 +26,7 @@ const Navbar = () => {
             flexGrow: 1,
           }}
         >
-          WMP Server
+          Mui 5 Demo
         </Typography>
       </Toolbar>
     </AppBar>

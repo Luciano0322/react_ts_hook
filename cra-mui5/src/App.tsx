@@ -6,6 +6,7 @@ import useToggle from './hooks/useToggle';
 import Home from './pages/Home';
 import Layout from './pages/Layout';
 import MuiButtonList from './pages/MuiButtonList';
+import MuiTextFields from './pages/MuiTextFieldList';
 import MuiTextList from './pages/MuiTextList';
 import PageError from './pages/PageError';
 import { withBWTheme } from './styles/mainTheme';
@@ -22,6 +23,7 @@ function App() {
             <Route index element={<Home/>} />
             <Route path="muiText" element={<MuiTextList/>} />
             <Route path="muiBtns" element={<MuiButtonList/>} />
+            <Route path="muiTextFields" element={<MuiTextFields/>} />
             <Route path="*" element={<PageError />} />
           </Route>
         </Routes>

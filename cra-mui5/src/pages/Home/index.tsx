@@ -21,6 +21,14 @@ const Home = () => {
       >
         MuiBtns
       </Button>
+      <Button
+        color="primary"
+        variant='contained'
+        component={Link}
+        to={`/muiTextFields`}
+      >
+        輸入框
+      </Button>
     </Stack>
   )
 }
