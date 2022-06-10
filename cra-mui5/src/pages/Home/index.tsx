@@ -11,7 +11,7 @@ const Home = () => {
         component={Link}
         to={`/muiText`}
       >
-        MuiTextList
+        文字
       </Button>
       <Button
         color="primary"
@@ -19,7 +19,7 @@ const Home = () => {
         component={Link}
         to={`/muiBtns`}
       >
-        MuiBtns
+        按鈕
       </Button>
       <Button
         color="primary"
@@ -28,6 +28,14 @@ const Home = () => {
         to={`/muiTextFields`}
       >
         輸入框
+      </Button>
+      <Button
+        color="primary"
+        variant='contained'
+        component={Link}
+        to={`/muiSelects`}
+      >
+        下拉選單
       </Button>
     </Stack>
   )

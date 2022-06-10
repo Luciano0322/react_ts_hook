@@ -1,11 +1,11 @@
-import { Button, createTheme, CssBaseline, PaletteMode, ThemeProvider, Typography } from '@mui/material';
-import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import useToggle from './hooks/useToggle';
 import Home from './pages/Home';
 import Layout from './pages/Layout';
 import MuiButtonList from './pages/MuiButtonList';
+import MuiSelectList from './pages/MuiSelectList';
 import MuiTextFields from './pages/MuiTextFieldList';
 import MuiTextList from './pages/MuiTextList';
 import PageError from './pages/PageError';
@@ -24,6 +24,7 @@ function App() {
             <Route path="muiText" element={<MuiTextList/>} />
             <Route path="muiBtns" element={<MuiButtonList/>} />
             <Route path="muiTextFields" element={<MuiTextFields/>} />
+            <Route path="muiSelects" element={<MuiSelectList/>} />
             <Route path="*" element={<PageError />} />
           </Route>
         </Routes>

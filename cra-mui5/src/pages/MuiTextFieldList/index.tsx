@@ -20,7 +20,7 @@ const MuiTextFields = () => {
         <TextField label="required" required />
         <TextField label="disabled" disabled />
         <TextField label="readonly" InputProps={{readOnly: true}}/>
-        <TextField label="有下helperText" helperText="這裡可以下小字提示也能用於error提示" type='number' />
+        <TextField label="有下helperText" helperText="這裡可以下小字提示也能用於error提示" type='password' />
       </Stack>
       <Stack direction='row' spacing={2}>
         <TextField 
@@ -38,6 +38,7 @@ const MuiTextFields = () => {
           helperText="**InputAdornment"
         />
       </Stack>
+      <Typography>基本常用的做法</Typography>
       <Stack direction='row' spacing={2}>
         <TextField
           label="controlled"
