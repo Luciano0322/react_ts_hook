@@ -37,6 +37,30 @@ const Home = () => {
       >
         下拉選單
       </Button>
+      <Button
+        color="primary"
+        variant='contained'
+        component={Link}
+        to={`/muiRadios`}
+      >
+        radios
+      </Button>
+      <Button
+        color="primary"
+        variant='contained'
+        component={Link}
+        to={`/muiCheckboxs`}
+      >
+        checkboxs
+      </Button>
+      <Button
+        color="primary"
+        variant='contained'
+        component={Link}
+        to={`/muiSwitchs`}
+      >
+        Switchs
+      </Button>
     </Stack>
   )
 }

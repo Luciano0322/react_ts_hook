@@ -1,10 +1,9 @@
-import { useTheme } from '@emotion/react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import React from 'react'
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { BiSun, BiMoon } from 'react-icons/bi';
 
-const Navbar = () => {
-  const theme = useTheme()
+const Navbar = ({dark, darkFn}:{dark: boolean; darkFn: () => void}) => {
   return (
     <AppBar 
       position="fixed" 
@@ -28,6 +27,9 @@ const Navbar = () => {
         >
           Mui 5 Demo
         </Typography>
+        <IconButton onClick={darkFn}>
+          {dark ? <BiSun/> : <BiMoon/>}
+        </IconButton>
       </Toolbar>
     </AppBar>
   )
