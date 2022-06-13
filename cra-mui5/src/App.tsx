@@ -1,6 +1,6 @@
 import { Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useRoutes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 // import useToggle from './hooks/useToggle';
 // import Home from './pages/Home';
 // import Layout from './pages/Layout';
@@ -15,14 +15,14 @@ import { BrowserRouter as Router, Route, Routes, useRoutes } from 'react-router-
 // import PageError from './pages/PageError';
 import { withBWTheme } from './styles/mainTheme';
 import { useSelector } from 'react-redux';
-import { RootState } from './lib/store';
 import RoutesConfig from './pages/RoutesConfig';
+import { selectDarkMod } from './lib/slices/darkModSlice';
 
 
 function App() {
   // 這裡應該用gloabel state來處理
   // const [dark, setDark] = useToggle(true)
-  const { dark } = useSelector((state: RootState) => state.darkMod) 
+  const { dark } = useSelector(selectDarkMod) 
   const bwModeTheme = createTheme(withBWTheme(dark ? 'dark': 'light'));
   return (
     <Router>

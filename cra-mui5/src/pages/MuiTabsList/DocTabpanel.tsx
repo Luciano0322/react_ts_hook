@@ -19,7 +19,7 @@ const DocTabpanel = (props: TabPanelProps) => {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: 2 }}>
           {children}
         </Box>
       )}

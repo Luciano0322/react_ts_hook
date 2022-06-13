@@ -8,6 +8,7 @@ import MuiRadioList from './MuiRadioList';
 import MuiSelectList from './MuiSelectList';
 import MuiSwitchList from './MuiSwitchList';
 import MuiTabsList from './MuiTabsList';
+import RouteTabpanel from './MuiTabsList/RouteTabpanel';
 import MuiTextFields from './MuiTextFieldList';
 import MuiTextList from './MuiTextList';
 import PageError from './PageError';
@@ -50,6 +51,12 @@ const RoutesConfig = () => {
         {
           path: "muiTabs",
           element: <MuiTabsList />,
+          children: [
+            {
+              path: ":childUrl",
+              element: <RouteTabpanel/>
+            }
+          ]
         },
       ]
     },

@@ -3,11 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiSun, BiMoon } from 'react-icons/bi';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../lib/store';
-import { modeChange } from '../../lib/slices/darkModSlice';
+import { modeChange, selectDarkMod } from '../../lib/slices/darkModSlice';
 
 const Navbar = () => {
-  const { dark } = useSelector((state: RootState) => state.darkMod);
+  const { dark } = useSelector(selectDarkMod);
   const dispatch = useDispatch();
   return (
     <AppBar

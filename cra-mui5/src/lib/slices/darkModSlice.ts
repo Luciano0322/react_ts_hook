@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
 interface DarkModState {
   dark: boolean;
@@ -15,6 +16,8 @@ export const darkModSlice = createSlice({
     }
   }
 });
+// in ts需要定義RootState
+export const selectDarkMod = (state: RootState) => state.darkMod;
 // 拆解redux actions function
 export const { modeChange } = darkModSlice.actions;
 
