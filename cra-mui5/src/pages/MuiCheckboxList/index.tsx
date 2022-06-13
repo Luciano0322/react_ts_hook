@@ -69,7 +69,7 @@ const MuiCheckBoxList = () => {
           label="by useCustom hook"
           control={<Checkbox
             checked={demo2}
-            onChange={toggleDemo2}
+            onChange={(e) => toggleDemo2(e.target.checked)}
           />}
         />
         <FormControlLabel
@@ -78,7 +78,7 @@ const MuiCheckBoxList = () => {
             icon={<AiOutlineLike/>}
             checkedIcon={<AiTwotoneLike/>}
             checked={demo3}
-            onChange={toggleDemo3}
+            onChange={(e) => toggleDemo3(e.target.checked)}
           />}
         />
       </Stack>

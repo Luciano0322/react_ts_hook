@@ -4,6 +4,7 @@ import Home from './Home';
 import Layout from './Layout';
 import MuiButtonList from './MuiButtonList';
 import MuiCheckBoxList from './MuiCheckboxList';
+import MuiDialogsList from './MuiDialogsList';
 import MuiRadioList from './MuiRadioList';
 import MuiSelectList from './MuiSelectList';
 import MuiSwitchList from './MuiSwitchList';
@@ -57,6 +58,10 @@ const RoutesConfig = () => {
               element: <RouteTabpanel/>
             }
           ]
+        },
+        {
+          path: "muiDialogs",
+          element: <MuiDialogsList />,
         },
       ]
     },

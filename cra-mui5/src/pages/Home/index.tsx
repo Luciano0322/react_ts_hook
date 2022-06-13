@@ -77,6 +77,18 @@ const Home = () => {
           Tabs
         </Button>
       </Stack>
+      <Typography variant="h5">Feedback</Typography>
+      <Divider/>
+      <Stack direction="row" spacing={2}>
+        <Button
+          color="primary"
+          variant='contained'
+          component={Link}
+          to={`/muiDialogs`}
+        >
+          Dialogs
+        </Button>
+      </Stack>
     </Stack>
   )
 }

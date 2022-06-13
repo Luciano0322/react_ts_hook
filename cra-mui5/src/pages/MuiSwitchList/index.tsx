@@ -8,7 +8,7 @@ const MuiSwitchList = () => {
     <Box>
       <FormControlLabel
         label='simple'
-        control={<Switch checked={demo} onChange={toggleDemo} />}
+        control={<Switch checked={demo} onChange={e => toggleDemo(e.target.checked)} />}
       />
     </Box>
   )
