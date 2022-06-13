@@ -1,5 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
+import darkModSlice from './slices/darkModSlice';
 
-export const store = configureStore({
-  reducer: {},
+const store = configureStore({
+  reducer: {
+    darkMod: darkModSlice
+  },
 })
+
+export type RootState = ReturnType<typeof store.getState>
+
+export default store;

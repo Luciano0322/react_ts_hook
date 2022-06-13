@@ -2,8 +2,13 @@ import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiSun, BiMoon } from 'react-icons/bi';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../lib/store';
+import { modeChange } from '../../lib/slices/darkModSlice';
 
-const Navbar = ({ dark, darkFn }: { dark: boolean; darkFn: () => void }) => {
+const Navbar = () => {
+  const { dark } = useSelector((state: RootState) => state.darkMod);
+  const dispatch = useDispatch();
   return (
     <AppBar
       position="fixed"
@@ -30,7 +35,7 @@ const Navbar = ({ dark, darkFn }: { dark: boolean; darkFn: () => void }) => {
         >
           Mui 5 Demo
         </Typography>
-        <IconButton onClick={darkFn}>
+        <IconButton onClick={() => dispatch(modeChange(!dark))}>
           {dark ? <BiSun /> : <BiMoon />}
         </IconButton>
       </Toolbar>
