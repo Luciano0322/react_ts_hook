@@ -7,9 +7,12 @@ const Navbar = ({ dark, darkFn }: { dark: boolean; darkFn: () => void }) => {
   return (
     <AppBar
       position="fixed"
-      // color="primary" 
       // enableColorOnDark 
-      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      color="transparent"
+      sx={{ 
+        zIndex: (theme) => theme.zIndex.drawer + 1,
+        backdropFilter: `blur(25px)`,
+      }}
     >
       <Toolbar>
         <Typography

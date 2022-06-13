@@ -3,7 +3,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
-const Layout = ({dark, darkFn}: {dark:boolean; darkFn: () => void}) => {
+const Layout = ({ dark, darkFn }: { dark: boolean; darkFn: () => void }) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <Navbar dark={dark} darkFn={darkFn} />
