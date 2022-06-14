@@ -16,6 +16,14 @@ const Home = () => {
         >
           文字
         </Button>
+        <Button
+          color="primary"
+          variant='contained'
+          component={Link}
+          to={`/muiTables`}
+        >
+          table
+        </Button>
       </Stack>
       <Typography variant='h5'>Input</Typography>
       <Divider/>

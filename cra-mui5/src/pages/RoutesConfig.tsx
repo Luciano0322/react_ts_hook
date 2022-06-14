@@ -9,6 +9,7 @@ import MuiDialogsList from './MuiDialogsList';
 import MuiRadioList from './MuiRadioList';
 import MuiSelectList from './MuiSelectList';
 import MuiSwitchList from './MuiSwitchList';
+import MuiTableList from './MuiTableList';
 import MuiTabsList from './MuiTabsList';
 import RouteTabpanel from './MuiTabsList/RouteTabpanel';
 import MuiTextFields from './MuiTextFieldList';
@@ -77,6 +78,10 @@ const routes = [
         path: "muiDialogs",
         element: <MuiDialogsList />,
       },
+      {
+        path: "muiTables",
+        element: <MuiTableList/>,
+      }
     ]
   },
   {
