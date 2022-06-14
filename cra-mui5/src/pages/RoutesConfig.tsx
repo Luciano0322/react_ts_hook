@@ -1,3 +1,4 @@
+import { Backdrop, CircularProgress } from '@mui/material';
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import Home from './Home';
@@ -24,7 +25,19 @@ const routes = [
       { path: '/', element: <Home /> },
       {
         path: "muiText",
-        element: <React.Suspense fallback={<div>loading...</div>}><LazyMuiTextList/></React.Suspense>,
+        element:
+          <React.Suspense
+            fallback={
+              <Backdrop
+                sx={{ color: '#fff', }}
+                open
+              >
+                <CircularProgress color="inherit" />
+              </Backdrop>
+            }
+          >
+            <LazyMuiTextList />
+          </React.Suspense>,
       },
       {
         path: "muiBtns",
@@ -56,7 +69,7 @@ const routes = [
         children: [
           {
             path: ":childUrl",
-            element: <RouteTabpanel/>
+            element: <RouteTabpanel />
           }
         ]
       },

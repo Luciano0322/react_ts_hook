@@ -1,25 +1,27 @@
 import { Box, FormControl, FormHelperText, InputLabel, MenuItem, NativeSelect, Select, SelectChangeEvent, Stack, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
 const MuiSelectList = () => {
   const [food, setFood] = useState<string | null>('')
   const [foods, setFoods] = useState<string[]>([])
   const [age, setAge] = useState<string>('')
   const [pet, setPet] = useState<string>('')
-  const foodChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const foodChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('callback');
     setFood(event.target.value as string)
-  }
-  const foodsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  }, [setFood])
+  const foodsChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const val = event.target.value
     setFoods(typeof val === 'string' ? val.split(',') : val)
-  }
+  }, [setFoods])
   const ageChange = (event: SelectChangeEvent) => {
+    console.log('normal');
     setAge(event.target.value as string);
   }
   const petChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setPet(event.target.value as string);
   }
-  console.log(age);
+  // console.log(age);
 
   return (
     <Stack spacing={3}>

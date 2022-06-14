@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <Stack spacing={3}>
-      <Typography variant='h5'>Input</Typography>
+      <Typography variant='h5' >Data Display</Typography>
       <Divider/>
-      <Stack direction='row' spacing={2}>
+      <Stack direction="row" spacing={2}>
         <Button
           color="primary"
           variant='contained'
@@ -16,6 +16,10 @@ const Home = () => {
         >
           文字
         </Button>
+      </Stack>
+      <Typography variant='h5'>Input</Typography>
+      <Divider/>
+      <Stack direction='row' spacing={2}>
         <Button
           color="primary"
           variant='contained'
