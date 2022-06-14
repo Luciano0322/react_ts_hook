@@ -11,65 +11,69 @@ import MuiSwitchList from './MuiSwitchList';
 import MuiTabsList from './MuiTabsList';
 import RouteTabpanel from './MuiTabsList/RouteTabpanel';
 import MuiTextFields from './MuiTextFieldList';
-import MuiTextList from './MuiTextList';
+// import MuiTextList from './MuiTextList';
 import PageError from './PageError';
+// 這裡要記得保持大寫
+const LazyMuiTextList = React.lazy(() => import('./MuiTextList'));
+// routes config
+const routes = [
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: '/', element: <Home /> },
+      {
+        path: "muiText",
+        element: <React.Suspense fallback={<div>loading...</div>}><LazyMuiTextList/></React.Suspense>,
+      },
+      {
+        path: "muiBtns",
+        element: <MuiButtonList />,
+      },
+      {
+        path: "muiTextFields",
+        element: <MuiTextFields />,
+      },
+      {
+        path: "muiSelects",
+        element: <MuiSelectList />,
+      },
+      {
+        path: "muiRadios",
+        element: <MuiRadioList />,
+      },
+      {
+        path: "muiCheckboxs",
+        element: <MuiCheckBoxList />,
+      },
+      {
+        path: "muiSwitchs",
+        element: <MuiSwitchList />,
+      },
+      {
+        path: "muiTabs",
+        element: <MuiTabsList />,
+        children: [
+          {
+            path: ":childUrl",
+            element: <RouteTabpanel/>
+          }
+        ]
+      },
+      {
+        path: "muiDialogs",
+        element: <MuiDialogsList />,
+      },
+    ]
+  },
+  {
+    path: "*",
+    element: <PageError />,
+  },
+]
 
 const RoutesConfig = () => {
-  const routeConfig = useRoutes([
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { path: '/', element: <Home /> },
-        {
-          path: "muiText",
-          element: <MuiTextList />,
-        },
-        {
-          path: "muiBtns",
-          element: <MuiButtonList />,
-        },
-        {
-          path: "muiTextFields",
-          element: <MuiTextFields />,
-        },
-        {
-          path: "muiSelects",
-          element: <MuiSelectList />,
-        },
-        {
-          path: "muiRadios",
-          element: <MuiRadioList />,
-        },
-        {
-          path: "muiCheckboxs",
-          element: <MuiCheckBoxList />,
-        },
-        {
-          path: "muiSwitchs",
-          element: <MuiSwitchList />,
-        },
-        {
-          path: "muiTabs",
-          element: <MuiTabsList />,
-          children: [
-            {
-              path: ":childUrl",
-              element: <RouteTabpanel/>
-            }
-          ]
-        },
-        {
-          path: "muiDialogs",
-          element: <MuiDialogsList />,
-        },
-      ]
-    },
-    {
-      path: "*",
-      element: <PageError />,
-    },
-  ])
+  const routeConfig = useRoutes(routes)
   return routeConfig
 }
 
