@@ -17,13 +17,14 @@ import { withBWTheme } from './styles/mainTheme';
 import { useSelector } from 'react-redux';
 import RoutesConfig from './pages/RoutesConfig';
 import { selectDarkMod } from './lib/slices/darkModSlice';
+import { zhTW } from '@mui/material/locale';
 
 
 function App() {
   // 這裡應該用gloabel state來處理
   // const [dark, setDark] = useToggle(true)
   const { dark } = useSelector(selectDarkMod) 
-  const bwModeTheme = createTheme(withBWTheme(dark ? 'dark': 'light'));
+  const bwModeTheme = createTheme(withBWTheme(dark ? 'dark': 'light'), zhTW);
   return (
     <Router>
       <ThemeProvider theme={bwModeTheme}>

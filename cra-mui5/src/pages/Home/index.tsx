@@ -76,6 +76,14 @@ const Home = () => {
         >
           Switchs
         </Button>
+        <Button
+          color="primary"
+          variant='contained'
+          component={Link}
+          to={`/muiDatepickers`}
+        >
+          日期輸入框
+        </Button>
       </Stack>
       <Typography variant="h5">Navigation</Typography>
       <Divider/>

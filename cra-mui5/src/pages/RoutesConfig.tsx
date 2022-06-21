@@ -15,6 +15,7 @@ import RouteTabpanel from './MuiTabsList/RouteTabpanel';
 import MuiTextFields from './MuiTextFieldList';
 // import MuiTextList from './MuiTextList';
 import PageError from './PageError';
+import MuiDatepickerList from './ＭuiDatepickerList';
 // 這裡要記得保持大寫
 const LazyMuiTextList = React.lazy(() => import('./MuiTextList'));
 // routes config
@@ -81,6 +82,10 @@ const routes = [
       {
         path: "muiTables",
         element: <MuiTableList/>,
+      },
+      {
+        path: "muiDatepickers",
+        element: <MuiDatepickerList/>,
       }
     ]
   },

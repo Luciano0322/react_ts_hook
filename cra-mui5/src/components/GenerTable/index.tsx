@@ -1,4 +1,5 @@
 import MaterialTable from '@material-table/core'
+import { ExportCsv, ExportPdf } from "@material-table/exporters"
 import React from 'react'
 
 interface Data {
@@ -61,6 +62,18 @@ const GenerTable = () => {
         padding: 'normal',
         // filtering: true,
         columnsButton: true,
+        exportMenu: [
+          {
+            label: "Export PDF",
+            exportFunc: (cols, datas) =>
+              ExportPdf(cols, datas, "myPdfFileName"),
+          },
+          {
+            label: "Export CSV",
+            exportFunc: (cols, datas) =>
+              ExportCsv(cols, datas, "myCsvFileName"),
+          },
+        ],
       }}
     />
   )

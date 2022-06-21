@@ -92,7 +92,7 @@ const MuiSelectList = () => {
           </Select>
           <FormHelperText>透過加入FormHelperText於formControl內</FormHelperText>
         </FormControl>
-        <FormControl variant='filled' sx={{minWidth: 100}} required>
+        <FormControl variant='filled' sx={{minWidth: 250}} required>
           <InputLabel id="age-label-filled">依照options調整寬度</InputLabel>
           <Select
             labelId="age-label-filled"
