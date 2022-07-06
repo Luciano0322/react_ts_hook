@@ -1,6 +1,7 @@
 import { Backdrop, CircularProgress } from '@mui/material';
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
+import FormHook from './FormHook';
 import Home from './Home';
 import Layout from './Layout';
 import MuiButtonList from './MuiButtonList';
@@ -86,6 +87,10 @@ const routes = [
       {
         path: "muiDatepickers",
         element: <MuiDatepickerList/>,
+      },
+      {
+        path: "formhook",
+        element: <FormHook/>,
       }
     ]
   },

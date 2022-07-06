@@ -27,7 +27,7 @@ const Home = () => {
       </Stack>
       <Typography variant='h5'>Input</Typography>
       <Divider/>
-      <Stack direction='row' spacing={2}>
+      <Stack direction='row' spacing={2} flexWrap="wrap">
         <Button
           color="primary"
           variant='contained'
@@ -107,6 +107,18 @@ const Home = () => {
           to={`/muiDialogs`}
         >
           Dialogs
+        </Button>
+      </Stack>
+      <Typography variant="h5">React hook form</Typography>
+      <Divider/>
+      <Stack direction="row" spacing={2}>
+        <Button
+          color="primary"
+          variant='contained'
+          component={Link}
+          to={`/formhook`}
+        >
+          Example
         </Button>
       </Stack>
     </Stack>
